@@ -1,0 +1,45 @@
+{% extends 'home/basics.html' %}
+{% block title %}{{title|title}}{% endblock title %}
+
+{% block body %}
+
+{% load static %}
+{% load humanize %}
+<div class="container my-4">
+    {% if show %}
+    <h3 style="border-bottom:1px solid gray;" class="mb-2">Course: <span style="color:orange;">{{title|title}}</span>
+    </h3>
+    {% for course in courses %}
+
+    <div class="card mb-3 m-auto px-0 bg-dark text-light">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img style="height:244px;width:100%;" src="/media/{{course.thumb}}" alt="...">
+            </div>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <h5 class="card-title" my-0>{{course.title}}</h5>
+                    <p class="card-text">{{course.desc}}</p>
+
+                    <p class="card-text my-1"> By <span style="color:orange;font-weight:bold ;">Tenali</span>
+                        <br> <small class="text-muted">Last updated
+                            {{course.date|naturaltime}} </small>{{cource.cname}}
+
+                    </p>
+                    <a href="{{course.cname}}-course/html_home" class="btn btn-sm btn-primary my-1 mx-2">Continue
+                        Reading</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div style="display:flex;justify-content:center;align-items:center;">
+        <img src="{% static 'home/icons/noblogg.gif' %}" alt="">
+    </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock body %}
