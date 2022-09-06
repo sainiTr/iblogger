@@ -1,1 +1,1 @@
-web:gunicorn mydailycode.wsgi
+web: gunicorn mydailycode.wsgi
