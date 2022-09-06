@@ -1,1 +1,2 @@
-web: gunicorn mydailycode.wsgi 
+release: python manage.py migrate
+web: gunicorn mydailycode.wsgi
