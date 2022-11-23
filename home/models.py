@@ -10,7 +10,7 @@ class Cources(models.Model):
     date = models.DateTimeField(auto_now_add=True)
     auther = models.CharField(max_length=50)
     cname = models.CharField(max_length=50,default='')
-    thumb = models.ImageField(upload_to='/cources/',default='')
+    thumb = models.ImageField(upload_to='cources/',default='')
 
     def __str__(self):
         return self.title
