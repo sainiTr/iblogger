@@ -48,6 +48,7 @@
 		<!--END-DEMO-CODE-->
 		<a id="whatsappshare" href="whatsapp://send?text=This is WhatsApp sharing example link"
                         data-action="share/whatsapp/share" title="Share link by WhatsApp"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png"/></a>
+		<a onclick="ShareUrl()" ><img src="https://cdn-icons-png.flaticon.com/512/2958/2958791.png"/></a>
 	</div>
 
 
@@ -62,6 +63,18 @@
 		crossorigin="anonymous"></script>
 
 	<script>
+		
+		
+		function ShareUrl() {
+        
+        const shareData = {
+            title: "Hellow this is from Ti-Blogger,
+            text: 'hellow i am from Ti-Blogger and i recommend you for using this template in your website for free',
+            url: "http://127.0.0.1:8000/themes/explore/id=5"
+        }
+        navigator.share(shareData)
+    }
+		
 		var editor1 = new RichTextEditor("#div_editor1");
 
 		editor1.setHTMLCode("<p>Hello World</p>");
