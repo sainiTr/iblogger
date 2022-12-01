@@ -65,15 +65,7 @@
 	<script>
 		
 		
-		function ShareUrl() {
-        
-        const shareData = {
-            title: "Hellow this is from Ti-Blogger,
-            text: 'hellow i am from Ti-Blogger and i recommend you for using this template in your website for free',
-            url: "http://127.0.0.1:8000/themes/explore/id=5"
-        }
-        navigator.share(shareData)
-    }
+		
 		
 		var editor1 = new RichTextEditor("#div_editor1");
 
@@ -120,6 +112,17 @@
 			});
 
 		});
+		
+		
+		function ShareUrl() {
+        
+        const shareData = {
+            title: "Hellow this is from Ti-Blogger,
+            text: 'hellow i am from Ti-Blogger and i recommend you for using this template in your website for free',
+            url: "http://127.0.0.1:8000/themes/explore/id=5"
+        }
+        navigator.share(shareData)
+    }
 	</script>
 </body>
 
